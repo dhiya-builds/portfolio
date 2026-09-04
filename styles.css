@@ -373,3 +373,31 @@ footer a {
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+@media (max-width: 500px) {
+  nav { 
+    padding: 0.8rem 4vw; 
+    flex-direction: row; /* تخلي اللوغو والروابط في نفس السطر */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links { 
+    gap: 0.75rem; 
+    overflow-x: auto; /* إذا ضاقت المساحة بزاف تسكرولي بالعرض بلا ما تتكسر */
+    white-space: nowrap;
+    padding-bottom: 2px;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none; /* تخفي شريط السكرول باش تبقى نات */
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+  }
+
+  /* ينقص الحجم تاع الهيرو باش يجي متناسق وما يضغطش الـ Navbar */
+  #hero {
+    padding-top: 5.5rem;
+  }
+}
